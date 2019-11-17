@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_main_card_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/holder"/>
+
+        <TextView
+            android:id="@+id/tv_card_main_1_title"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_main_card_1"
+            android:layout_marginEnd="@dimen/mtrl_card_spacing"
+            android:layout_marginStart="@dimen/mtrl_card_spacing"
+            android:layout_marginTop="@dimen/mtrl_card_spacing"
+            android:text="main_card_title"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tv_card_main1_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_card_main_1_title"
+            android:layout_marginBottom="@dimen/mtrl_card_spacing"
+            android:layout_marginEnd="@dimen/mtrl_card_spacing"
+            android:layout_marginStart="@dimen/mtrl_card_spacing"
+            android:layout_marginTop="@dimen/mtrl_card_spacing"
+            android:text="card_subtitle" />
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_card_main1_action1"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_card_main1_subtitle"
+            android:layout_margin="@dimen/mtrl_card_spacing"
+            android:text="button_1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_card_main1_action2"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_card_main1_subtitle"
+            android:layout_marginBottom="@dimen/mtrl_card_spacing"
+            android:layout_marginTop="@dimen/mtrl_card_spacing"
+            android:layout_toEndOf="@id/btn_card_main1_action1"
+            android:text="button_2"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</com.google.android.material.card.MaterialCardView>
