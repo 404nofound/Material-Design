@@ -17,7 +17,9 @@
 
         <include layout="@layout/cardview_1" />
 
+        <include layout="@layout/cardview_2" />
 
+        <include layout="@layout/cardview_3" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

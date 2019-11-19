@@ -1,62 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/card_view"
+    style="@style/Widget.MaterialComponents.CardView"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    app:cardCornerRadius="4dp">
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:checkable="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackground"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="5dp">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="#ffffff" >
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:scaleType="centerCrop"/>
-
-        <TextView
-            android:id="@+id/title"
+        <RelativeLayout
+            android:id="@+id/title_part_cardview_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:layout_marginTop="5dp"
-            android:textSize="18sp" />
+            android:layout_margin="16dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp">
+            <ImageView
+                android:id="@+id/small_circle_cardview_2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/nav_header_desc"
+                app:srcCompat="@mipmap/holder_small" />
 
             <TextView
+                android:id="@+id/title_cardview_2"
+                style="@style/TextAppearance.AppCompat.Medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Keywords:"
-                android:textColor="#000000"
-                android:textSize="18sp" />
+                android:layout_alignTop="@id/small_circle_cardview_2"
+                android:layout_toEndOf="@id/small_circle_cardview_2"
+                android:layout_marginEnd="8dp"
+                android:text="Title goes here"
+                android:gravity="top|start"
+                android:textStyle="bold"
+                android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/keywords"
-                android:layout_width="0dp"
+                android:id="@+id/secondary_cardview_2"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="end"
-                android:textSize="16sp" />
-        </LinearLayout>
+                android:layout_below="@id/title_cardview_2"
+                android:layout_alignBottom="@+id/small_circle_cardview_2"
+                android:layout_toEndOf="@id/small_circle_cardview_2"
+                android:layout_marginEnd="8dp"
+                android:text="Secondary text"
+                android:gravity="bottom|start"/>
 
+        </RelativeLayout>
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/img_cardview_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_part_cardview_2"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/holder"/>
 
-</androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/support_text_cardview_2"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_cardview_2"
+            android:layout_margin="16dp"
+            android:text="Write down your card support text here" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_below="@id/support_text_cardview_2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn1_cardview_2"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="8dp"
+                android:textStyle="bold"
+                android:text="BUTTON 1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn2_cardview_2"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/btn1_cardview_2"
+                android:textStyle="bold"
+                android:text="BUTTON 2"/>
+
+            <ImageView
+                android:id="@+id/img_share_cardview_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_share_black_24dp" />
+
+            <ImageView
+                android:id="@+id/img_favorite_cardview_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@id/img_share_cardview_2"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_favorite_border_black_24dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

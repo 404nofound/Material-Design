@@ -1,76 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView
+    android:id="@+id/card_view"
+    style="@style/Widget.MaterialComponents.CardView"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:checkable="true"
     android:clickable="true"
     android:focusable="true"
+    android:background="?android:attr/selectableItemBackground"
     android:foreground="?android:attr/selectableItemBackground"
-    app:cardCornerRadius="4dp">
+    app:cardCornerRadius="4dp"
+    app:cardElevation="5dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/img_main_card_1"
+        <RelativeLayout
+            android:id="@+id/head_part_carview_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/holder"/>
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
 
-        <TextView
-            android:id="@+id/tv_card_main_1_title"
-            style="@style/TextAppearance.AppCompat.Large"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/img_main_card_1"
-            android:layout_marginEnd="@dimen/mtrl_card_spacing"
-            android:layout_marginStart="@dimen/mtrl_card_spacing"
-            android:layout_marginTop="@dimen/mtrl_card_spacing"
-            android:text="main_card_title"
-            android:textColor="#000000" />
+            <ImageView
+                android:id="@+id/img_cardview_1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/holder" />
 
-        <TextView
-            android:id="@+id/tv_card_main1_subtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_card_main_1_title"
-            android:layout_marginBottom="@dimen/mtrl_card_spacing"
-            android:layout_marginEnd="@dimen/mtrl_card_spacing"
-            android:layout_marginStart="@dimen/mtrl_card_spacing"
-            android:layout_marginTop="@dimen/mtrl_card_spacing"
-            android:text="card_subtitle" />
+            <TextView
+                android:id="@+id/title_cardview_1"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title goes here"
+                android:layout_toStartOf="@+id/img_cardview_1"
+                android:layout_alignTop="@id/img_cardview_1"
+                android:gravity="top|start"
+                android:textStyle="bold"
+                android:textColor="#000000" />
 
-
+            <TextView
+                android:id="@+id/subtitle_cardview_1"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_cardview_1"
+                android:maxLines="2"
+                android:text="Secondary line text Lorem ipsum dolor sit amet"
+                android:layout_alignBottom="@id/img_cardview_1"
+                android:layout_toStartOf="@+id/img_cardview_1"
+                android:gravity="bottom|start"/>
+        </RelativeLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_card_main1_action1"
-            style="?attr/materialButtonOutlinedStyle"
+            android:id="@+id/btn1_cardview_1"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_card_main1_subtitle"
-            android:layout_margin="@dimen/mtrl_card_spacing"
-            android:text="button_1"/>
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@id/head_part_carview_1"
+            android:text="BUTTON 1"
+            android:textStyle="bold"/>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_card_main1_action2"
-            style="?attr/materialButtonOutlinedStyle"
+            android:id="@+id/btn2_cardview_1"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_card_main1_subtitle"
-            android:layout_marginBottom="@dimen/mtrl_card_spacing"
-            android:layout_marginTop="@dimen/mtrl_card_spacing"
-            android:layout_toEndOf="@id/btn_card_main1_action1"
-            android:text="button_2"/>
-
-
+            android:layout_below="@id/head_part_carview_1"
+            android:layout_toEndOf="@id/btn1_cardview_1"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="BUTTON 2"
+            android:textStyle="bold"/>
     </RelativeLayout>
-
-
-
-
 </com.google.android.material.card.MaterialCardView>

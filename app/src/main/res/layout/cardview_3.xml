@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/card_view"
+    style="@style/Widget.MaterialComponents.CardView"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:checkable="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackground"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_cardview_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/holder"/>
+
+        <RelativeLayout
+            android:id="@+id/title_part_cardview_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_cardview_3"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:id="@+id/title_cardview_3"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Title"
+                android:gravity="bottom|start"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <RelativeLayout
+                android:id="@+id/rating_part_cardview_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/title_cardview_3"
+                android:layout_marginTop="8dp">
+
+                <RatingBar
+                    android:id="@+id/ratingbar_cardview_3"
+                    style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:numStars="5"
+                    android:rating="4.5"
+                    android:stepSize="0.5" />
+
+                <TextView
+                    android:id="@+id/rating_cardview_3"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ratingbar_cardview_3"
+                    android:layout_toEndOf="@id/ratingbar_cardview_3"
+                    android:text="4.5 (459)"
+                    android:gravity="bottom|start"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/secondary_cardview_3"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_below="@id/rating_part_cardview_3"
+                android:text="Secondary text"
+                android:gravity="bottom|start"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/support_text_cardview_3"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secondary_cardview_3"
+                android:gravity="bottom|start"
+                android:text="Write down your card support text here" />
+
+            <View
+                android:id="@+id/line_viewcard_3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/support_text_cardview_3"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@color/gray_light" />
+
+            <TextView
+                android:id="@+id/subtitle_cardview_3"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_viewcard_3"
+                android:text="Subtitle"
+                android:gravity="bottom|start"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subtitle_cardview_3">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_item1_cardview_31"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Item 1"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_item2_cardview_31"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/chip_item1_cardview_3"
+                    android:text="Item 2"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_item3_cardview_31"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/chip_item2_cardview_3"
+                    android:text="Item 3"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_item4_cardview_31"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/chip_item3_cardview_3"
+                    android:text="Item 4"/>
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_below="@id/title_part_cardview_3">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn1_cardview_3"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="8dp"
+                android:textStyle="bold"
+                android:text="BUTTON 1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn2_cardview_3"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/btn1_cardview_3"
+                android:textStyle="bold"
+                android:text="BUTTON 2"/>
+
+            <ImageView
+                android:id="@+id/img_share_cardview_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_share_black_24dp" />
+
+            <ImageView
+                android:id="@+id/img_favorite_cardview_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@id/img_share_cardview_3"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_favorite_border_black_24dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

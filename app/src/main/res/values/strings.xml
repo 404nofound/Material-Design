@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Material Design</string>
+
+    <string name="tab_text_1">CARDVIEW</string>
+    <string name="tab_text_2">WIDGETS</string>
+    <string name="tab_text_3">DIALOGS</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
