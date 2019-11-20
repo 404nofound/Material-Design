@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RatingBar;
 
 import androidx.annotation.NonNull;
 import androidx.customview.widget.ViewDragHelper;
@@ -22,6 +23,7 @@ public class SlideshowFragment extends Fragment { //implements
 
     private SlideshowViewModel slideshowViewModel;
     private MaterialCardView cardView;
+    private RatingBar ratingBar;
 
     public static SlideshowFragment newInstance(int index) {
         SlideshowFragment fragment = new SlideshowFragment();
@@ -48,6 +50,15 @@ public class SlideshowFragment extends Fragment { //implements
                 textView.setText(s);
             }
         });*/
+
+        ratingBar = root.findViewById(R.id.ratingbar_cardview_3);
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+
+            }
+        });
+
         return root;
     }
 

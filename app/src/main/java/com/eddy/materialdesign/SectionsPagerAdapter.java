@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.eddy.materialdesign.ui.dialogs.DialogsFragment;
 import com.eddy.materialdesign.ui.slideshow.SlideshowFragment;
 
 /**
@@ -17,7 +18,7 @@ import com.eddy.materialdesign.ui.slideshow.SlideshowFragment;
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_2};
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3};
     private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
@@ -29,6 +30,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
+        if (position == 0) {
+            return SlideshowFragment.newInstance(position + 1);
+        } else if (position == 1) {
+            return DialogsFragment.newInstance(position + 1);
+        }
         return SlideshowFragment.newInstance(position + 1);
     }
 
