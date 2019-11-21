@@ -1,10 +1,15 @@
 package com.eddy.materialdesign.ui.dialogs;
 
+import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
+import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
+import android.widget.TimePicker;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -12,6 +17,9 @@ import androidx.fragment.app.Fragment;
 import com.eddy.materialdesign.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
+import java.text.DateFormat;
+import java.util.Calendar;
 
 public class DialogsFragment extends Fragment implements View.OnClickListener {
 
@@ -128,14 +136,6 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.btn_dialog_4:
-                /*String[] multiChoiceItems = getResources().getStringArray(R.array.dialog_choice_array);
-                boolean[] checkedItems = {true, false, false, false, false};
-                new AlertDialog.Builder(getContext())
-                        .setTitle(getString(R.string.main_dialog_multi_choice))
-                        .setMultiChoiceItems(multiChoiceItems, checkedItems, null)
-                        .setPositiveButton(getString(R.string.dialog_ok), null)
-                        .setNegativeButton(getString(R.string.dialog_cancel), null)
-                        .show();*/
                 String[] multiChoiceItems = getResources().getStringArray(R.array.dialog_choices_array);
                 boolean[] checkedItems = {true, false, false, false, false, false, false, false, false};
                 new MaterialAlertDialogBuilder(getContext(), R.style.ThemeOverlay_MaterialComponents_MaterialAlertDialog)
@@ -163,9 +163,9 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
 
 
             case R.id.btn_dialog_5:
-                /*ProgressDialog progressDialog = new ProgressDialog(getContext());
-                progressDialog.setMessage(getString(R.string.main_dialog_progress_title));
-                progressDialog.show();*/
+                ProgressDialog progressDialog = new ProgressDialog(getContext());
+                progressDialog.setMessage("Waiting");
+                progressDialog.show();
                 break;
 
             case R.id.btn_dialog_6:
@@ -198,30 +198,33 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.btn_dialog_7:
-                /*DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
+                final Calendar calendar = Calendar.getInstance();
+
+                DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                         calendar.set(Calendar.YEAR, year);
                         calendar.set(Calendar.MONTH, monthOfYear);
                         calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                         String date = DateFormat.getDateInstance(DateFormat.MEDIUM).format(calendar.getTime());
-                        btn_dialog_7.setText(date);
+                        //btn_dialog_7.setText(date);
                     }
                 }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
-                datePickerDialog.show();*/
+                datePickerDialog.show();
                 break;
 
             case R.id.btn_dialog_8:
-                /*TimePickerDialog timePickerDialog = new TimePickerDialog(getContext(), new TimePickerDialog.OnTimeSetListener() {
+                final Calendar calendar1 = Calendar.getInstance();
+                TimePickerDialog timePickerDialog = new TimePickerDialog(getContext(), new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int i, int i1) {
-                        calendar.set(Calendar.HOUR_OF_DAY, i);
-                        calendar.set(Calendar.MINUTE, i1);
-                        String time = DateFormat.getTimeInstance(DateFormat.SHORT).format(calendar.getTime());
-                        btn_dialog_8.setText(time);
+                        calendar1.set(Calendar.HOUR_OF_DAY, i);
+                        calendar1.set(Calendar.MINUTE, i1);
+                        String time = DateFormat.getTimeInstance(DateFormat.SHORT).format(calendar1.getTime());
+                        //btn_dialog_8.setText(time);
                     }
-                }, calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), true);
-                timePickerDialog.show();*/
+                }, calendar1.get(Calendar.HOUR_OF_DAY), calendar1.get(Calendar.MINUTE), true);
+                timePickerDialog.show();
                 break;
 
             case R.id.btn_dialog_9:
