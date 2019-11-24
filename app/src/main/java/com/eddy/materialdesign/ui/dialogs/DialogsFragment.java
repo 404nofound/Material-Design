@@ -18,7 +18,6 @@ import com.eddy.materialdesign.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
-import java.text.DateFormat;
 import java.util.Calendar;
 
 public class DialogsFragment extends Fragment implements View.OnClickListener {
@@ -27,6 +26,8 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
 
     private MaterialButton button1, button2, button3, button4,
             button5, button6, button7, button8, button9, button10, button11;
+
+    private Calendar calendar = Calendar.getInstance();
 
     public static DialogsFragment newInstance(int index) {
         DialogsFragment fragment = new DialogsFragment();
@@ -198,32 +199,27 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.btn_dialog_7:
-                final Calendar calendar = Calendar.getInstance();
-
                 DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                         calendar.set(Calendar.YEAR, year);
                         calendar.set(Calendar.MONTH, monthOfYear);
                         calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                        String date = DateFormat.getDateInstance(DateFormat.MEDIUM).format(calendar.getTime());
-                        //btn_dialog_7.setText(date);
+                        //String date = DateFormat.getDateInstance(DateFormat.MEDIUM).format(calendar.getTime());
                     }
                 }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
                 datePickerDialog.show();
                 break;
 
             case R.id.btn_dialog_8:
-                final Calendar calendar1 = Calendar.getInstance();
                 TimePickerDialog timePickerDialog = new TimePickerDialog(getContext(), new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int i, int i1) {
-                        calendar1.set(Calendar.HOUR_OF_DAY, i);
-                        calendar1.set(Calendar.MINUTE, i1);
-                        String time = DateFormat.getTimeInstance(DateFormat.SHORT).format(calendar1.getTime());
-                        //btn_dialog_8.setText(time);
+                        calendar.set(Calendar.HOUR_OF_DAY, i);
+                        calendar.set(Calendar.MINUTE, i1);
+                        //String time = DateFormat.getTimeInstance(DateFormat.SHORT).format(calendar1.getTime());
                     }
-                }, calendar1.get(Calendar.HOUR_OF_DAY), calendar1.get(Calendar.MINUTE), true);
+                }, calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), true);
                 timePickerDialog.show();
                 break;
 
@@ -253,6 +249,7 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
 
             case R.id.btn_dialog_10:
                 /*final Dialog fullscreenDialog = new Dialog(getContext(), R.style.DialogFullscreen);
+
                 fullscreenDialog.setContentView(R.layout.dialog_fullscreen);
                 ImageView img_full_screen_dialog = fullscreenDialog.findViewById(R.id.img_full_screen_dialog);
                 Glide.with(getContext()).load(R.drawable.google_assistant).into(img_full_screen_dialog);

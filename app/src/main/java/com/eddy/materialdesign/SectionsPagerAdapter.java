@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.eddy.materialdesign.ui.dialogs.DialogsFragment;
 import com.eddy.materialdesign.ui.slideshow.SlideshowFragment;
+import com.eddy.materialdesign.ui.widgets.WidgetsFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -35,7 +36,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         } else if (position == 1) {
             return DialogsFragment.newInstance(position + 1);
         }
-        return SlideshowFragment.newInstance(position + 1);
+        return WidgetsFragment.newInstance(position + 1);
     }
 
     @Nullable

@@ -19,9 +19,9 @@
             android:id="@+id/btn_dialog_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#F44336"
-            android:padding="8dp"
-            android:text="main_dialog_simple"
+            android:backgroundTint="#2196F3"
+            android:padding="15dp"
+            android:text="Alert Dialog"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -29,10 +29,10 @@
             android:id="@+id/btn_dialog_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#009688"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#E91E63"
-            android:padding="8dp"
-            android:text="main_dialog_simple"
+            android:padding="15dp"
+            android:text="Confirmation Dialog"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -41,9 +41,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#9C27B0"
-            android:padding="8dp"
-            android:text="main_dialog_single_choice"
+            android:backgroundTint="#FF9800"
+            android:padding="15dp"
+            android:text="Single Choice Dialog"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -52,9 +52,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#3F51B5"
-            android:padding="8dp"
-            android:text="main_dialog_multi_choice"
+            android:backgroundTint="#2196F3"
+            android:padding="15dp"
+            android:text="Multi Choice Dialog"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -62,10 +62,10 @@
             android:id="@+id/btn_dialog_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#009688"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#2196F3"
-            android:padding="8dp"
-            android:text="main_dialog_progress"
+            android:padding="15dp"
+            android:text="Progress Dialog 1"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -74,9 +74,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#009688"
-            android:padding="8dp"
-            android:text="main_dialog_progress"
+            android:backgroundTint="#FF9800"
+            android:padding="15dp"
+            android:text="Progress Dialog 2"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -85,9 +85,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#4CAF50"
-            android:padding="8dp"
-            android:text="main_dialog_data_picker"
+            android:backgroundTint="#2196F3"
+            android:padding="15dp"
+            android:text="Date Picker Dialog"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -95,10 +95,10 @@
             android:id="@+id/btn_dialog_8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#009688"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#FF9800"
-            android:padding="8dp"
-            android:text="main_dialog_data_time"
+            android:padding="15dp"
+            android:text="Time Picker Dialog"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -107,9 +107,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#FF5722"
-            android:padding="8dp"
-            android:text="main_dialog_bottom"
+            android:backgroundTint="#FF9800"
+            android:padding="15dp"
+            android:text="Bottom Dialog"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -118,9 +118,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#795548"
-            android:padding="8dp"
-            android:text="main_dialog_fullscreen"
+            android:backgroundTint="#2196F3"
+            android:padding="15dp"
+            android:text="Fullscreen Dialog"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -128,10 +128,10 @@
             android:id="@+id/btn_dialog_11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#009688"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#607D8B"
-            android:padding="8dp"
-            android:text="main_popup_menu"
+            android:padding="15dp"
+            android:text="Popup Menu Dialog"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
