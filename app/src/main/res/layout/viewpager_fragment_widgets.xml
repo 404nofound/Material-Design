@@ -59,7 +59,7 @@
             android:textAlignment="textStart"
             android:textSize="15sp"
             android:layout_marginTop="10dp"
-            android:text="Outlined Button"
+            android:text="Outlined + Text Button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/material_unelevated_button" />
@@ -67,37 +67,25 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/material_text_button1"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="outlined_button_label_enabled"
+            android:text="Outline Button"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/material_text_button2"
+            app:layout_constraintTop_toBottomOf="@+id/text2"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/material_text_button2"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text Button"
+            app:layout_constraintStart_toEndOf="@+id/material_text_button1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text2"/>
 
         <TextView
             android:id="@+id/text3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="textStart"
-            android:textSize="15sp"
-            android:layout_marginTop="10dp"
-            android:text="Text Button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/material_text_button1" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/material_text_button2"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="text_button_label_enabled"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text3"/>
-
-        <TextView
-            android:id="@+id/text4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="textStart"
@@ -111,27 +99,39 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/material_icon_button3"
             style="@style/Widget.MaterialComponents.Button.Icon"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="icon_button_label_enabled"
+            android:text="Button 1"
             app:icon="@drawable/ic_menu_camera"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text4"/>
+            app:layout_constraintEnd_toStartOf="@+id/material_icon_button4"
+            app:layout_constraintTop_toBottomOf="@+id/text3"/>
         <!-- app:iconPadding="8dp"-->
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/material_icon_button4"
             style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="icon_button_label_enabled"
+            android:text="Button 2"
             app:icon="@drawable/ic_menu_camera"
             app:iconPadding="8dp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/material_icon_button3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/material_icon_button3"/>
+            app:layout_constraintTop_toBottomOf="@+id/text3"/>
         <!-- app:iconPadding="8dp"-->
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:text="Button Toggle Group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/material_icon_button4" />
 
         <com.google.android.material.button.MaterialButtonToggleGroup
             xmlns:android="http://schemas.android.com/apk/res/android"
@@ -142,9 +142,7 @@
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/material_icon_button4">
-
-
+            app:layout_constraintTop_toBottomOf="@+id/text4">
 
             <com.google.android.material.button.MaterialButton
                 style="?attr/materialButtonOutlinedStyle"
@@ -175,6 +173,201 @@
                 app:layout_constraintTop_toBottomOf="@+id/material_icon_button4"/>
 
         </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:text="Chip Examples"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toggle_button_group" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/action_chip"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipIcon="@drawable/ic_dashboard_black_24dp"
+            android:text="Icon"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/text5"/>
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Entry"
+            android:id="@+id/entry_chip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="false"
+            android:text="chip"
+            app:layout_constraintStart_toEndOf="@+id/action_chip"
+
+            app:layout_constraintTop_toBottomOf="@+id/text5"/>
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Entry"
+            android:id="@+id/entry_chip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:closeIconEnabled="false"
+            android:text="chip"
+            app:layout_constraintStart_toEndOf="@+id/entry_chip1"
+
+            app:layout_constraintTop_toBottomOf="@+id/text5"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filter_chip"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            app:layout_constraintStart_toEndOf="@+id/entry_chip2"
+
+            app:layout_constraintTop_toBottomOf="@+id/text5"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/choice_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choice"
+            app:layout_constraintStart_toEndOf="@+id/filter_chip"
+
+            app:layout_constraintTop_toBottomOf="@+id/text5"/>
+
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:text="Filter Chip Group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choice_chip" />
+
+        <HorizontalScrollView
+            android:id="@+id/filter_chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text6">
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choice 1"/>
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choice 2"/>
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choice 3"/>
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choice 4"/>
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choice 5"/>
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choice 6"/>
+
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/text7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:text="Choice Chip Group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filter_chip_group" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/choice_chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text7">
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleLine="true">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choice 1"/>
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choice 2"/>
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choice 3"/>
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choice 4"/>
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choice 5"/>
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choice 6"/>
+
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
