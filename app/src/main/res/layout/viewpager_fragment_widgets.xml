@@ -316,7 +316,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/filter_chip_group" />
 
-
         <HorizontalScrollView
             android:id="@+id/choice_chip_group"
             android:layout_width="match_parent"
@@ -368,6 +367,131 @@
 
             </com.google.android.material.chip.ChipGroup>
         </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/text8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:text="CheckBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choice_chip_group" />
+
+        <CheckBox
+            android:id="@+id/checkbox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item 1"
+            android:checked="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/checkbox2"
+            app:layout_constraintTop_toBottomOf="@+id/text8"/>
+
+        <CheckBox
+            android:id="@+id/checkbox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item 2"
+            android:checked="true"
+            app:layout_constraintStart_toEndOf="@+id/checkbox1"
+            app:layout_constraintEnd_toStartOf="@+id/checkbox3"
+            app:layout_constraintTop_toBottomOf="@+id/text8"/>
+
+        <CheckBox
+            android:id="@+id/checkbox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item 3"
+            android:checked="true"
+            app:layout_constraintStart_toEndOf="@+id/checkbox2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text8"/>
+
+        <TextView
+            android:id="@+id/text9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:text="Radio Group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkbox2" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/first"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text9">
+
+            <RadioButton
+                android:id="@+id/first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item 1"/>
+
+            <RadioButton
+                android:id="@+id/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item 2"/>
+
+            <RadioButton
+                android:id="@+id/third"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item 3"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/text10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:text="Switches"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Item 1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/switch2"
+            app:layout_constraintTop_toBottomOf="@+id/text10"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Item 2"
+            app:layout_constraintStart_toEndOf="@+id/switch1"
+            app:layout_constraintEnd_toStartOf="@+id/switch3"
+            app:layout_constraintTop_toBottomOf="@+id/text10"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Item 3"
+            app:layout_constraintStart_toEndOf="@+id/switch2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text10"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
