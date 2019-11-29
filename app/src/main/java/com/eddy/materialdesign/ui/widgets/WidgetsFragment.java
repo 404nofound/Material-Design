@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -40,6 +41,24 @@ public class WidgetsFragment extends Fragment {
                 Toast.makeText(getActivity(), "changed", Toast.LENGTH_SHORT).show();
             }
         });
+
+        final ProgressBar bar = root.findViewById(R.id.progress_bar2);
+
+        new Thread(){
+            @Override
+            public void run() {
+                int i=0;
+                while(i<100){
+                    i++;
+                    try {
+                        Thread.sleep(80);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    bar.setProgress(i);
+                }
+            }
+        }.start();
 
         return root;
     }
