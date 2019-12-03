@@ -18,6 +18,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.viewpager.widget.ViewPager;
 
+import com.eddy.materialdesign.ui.bottomappbar.BottomAppBarActivity;
 import com.eddy.materialdesign.ui.recyclerview.RecyclerViewActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
@@ -88,10 +89,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         switch (item.getItemId()) {
             case R.id.nav_home:
-                Intent i = new Intent(this, RecyclerViewActivity.class);
-                startActivity(i);
+                Intent i1 = new Intent(this, RecyclerViewActivity.class);
+                startActivity(i1);
                 break;
             case R.id.nav_gallery:
+                Intent i2 = new Intent(this, BottomAppBarActivity.class);
+                startActivity(i2);
                 break;
             case R.id.nav_slideshow:
                 break;

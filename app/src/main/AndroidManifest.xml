@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.recyclerview.RecyclerViewActivity"></activity>
-        <activity android:name=".ui.recyclerview.FruitActivity"
-            android:theme="@style/FruitActivityTheme"></activity>
+        <activity android:name=".ui.bottomappbar.BottomAppBarActivity"></activity>
+        <activity android:name=".ui.recyclerview.RecyclerViewActivity" />
+        <activity
+            android:name=".ui.recyclerview.FruitActivity"
+            android:theme="@style/FruitActivityTheme" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
