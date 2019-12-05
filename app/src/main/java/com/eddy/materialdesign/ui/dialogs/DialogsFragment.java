@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.eddy.materialdesign.R;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
@@ -24,7 +25,9 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    private MaterialButton button1, button2, button3, button4,
+    private View root;
+
+    private MaterialButton button0, button1, button2, button3, button4,
             button5, button6, button7, button8, button9, button10, button11;
 
     private Calendar calendar = Calendar.getInstance();
@@ -40,8 +43,9 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         //slideshowViewModel = ViewModelProviders.of(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.viewpager_fragment_dislogs, container, false);
+        root = inflater.inflate(R.layout.viewpager_fragment_dislogs, container, false);
 
+        button0 = root.findViewById(R.id.btn_dialog_0);
         button1 = root.findViewById(R.id.btn_dialog_1);
         button2 = root.findViewById(R.id.btn_dialog_2);
         button3 = root.findViewById(R.id.btn_dialog_3);
@@ -54,6 +58,7 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
         button10 = root.findViewById(R.id.btn_dialog_10);
         button11 = root.findViewById(R.id.btn_dialog_11);
 
+        button0.setOnClickListener(this);
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
@@ -74,6 +79,23 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
 
         switch (v.getId()) {
+            case R.id.btn_dialog_0:
+                /*Snackbar.make(root, "Snack Bar", Snackbar.LENGTH_LONG)
+                        .setAction("Dismiss", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                // Respond to the click, such as by undoing the modification that caused
+                                // this message to be displayed
+                            }
+                        }).show();*/
+
+                BottomSheetDialog sheelt = new BottomSheetDialog(getActivity());
+                View contentView = LayoutInflater.from(getActivity()).inflate(R.layout.bottom_pop_item, null);
+                sheelt.setContentView(contentView);
+
+                sheelt.show();
+                sheelt.getWindow().findViewById(R.id.design_bottom_sheet).setBackgroundResource(android.R.color.transparent);
+                break;
             case R.id.btn_dialog_1:
                 new MaterialAlertDialogBuilder(getActivity(), R.style.ThemeOverlay_MaterialComponents_MaterialAlertDialog)
                         //.setTitle("Title")

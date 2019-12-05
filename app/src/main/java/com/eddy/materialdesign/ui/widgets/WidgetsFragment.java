@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.eddy.materialdesign.R;
 import com.google.android.material.button.MaterialButtonToggleGroup;
+import com.google.android.material.slider.Slider;
 
 public class WidgetsFragment extends Fragment {
 
@@ -59,6 +60,10 @@ public class WidgetsFragment extends Fragment {
                 }
             }
         }.start();
+
+        Slider slider = root.findViewById(R.id.slider);
+
+
 
         return root;
     }

@@ -16,6 +16,16 @@
         android:paddingTop="@dimen/activity_vertical_margin">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_dialog_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2196F3"
+            android:padding="15dp"
+            android:text="SnackBar"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dialog_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

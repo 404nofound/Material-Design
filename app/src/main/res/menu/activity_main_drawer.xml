@@ -5,17 +5,17 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_recycler_view"
             android:icon="@drawable/ic_menu_camera"
             android:title="Recycler View" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_bottom_app_bar"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Bottom App Bar" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_bottom_navigation"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Function 1" />
+            android:title="Bottom Navigation" />
         <item
             android:id="@+id/nav_tools"
             android:icon="@drawable/ic_menu_manage"

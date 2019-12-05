@@ -1,16 +1,16 @@
-package com.eddy.materialdesign.ui.send;
+package com.eddy.materialdesign.ui.bottomnavigation.dashboard;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SendViewModel extends ViewModel {
+public class DashboardViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public SendViewModel() {
+    public DashboardViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is send fragment");
+        mText.setValue("This is dashboard fragment");
     }
 
     public LiveData<String> getText() {

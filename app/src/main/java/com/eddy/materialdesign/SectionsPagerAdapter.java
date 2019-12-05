@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.eddy.materialdesign.ui.cardviews.CardViewFragment;
 import com.eddy.materialdesign.ui.dialogs.DialogsFragment;
-import com.eddy.materialdesign.ui.slideshow.SlideshowFragment;
 import com.eddy.materialdesign.ui.widgets.WidgetsFragment;
 
 /**
@@ -32,7 +32,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
         if (position == 0) {
-            return SlideshowFragment.newInstance(position + 1);
+            return CardViewFragment.newInstance(position + 1);
         } else if (position == 1) {
             return DialogsFragment.newInstance(position + 1);
         }

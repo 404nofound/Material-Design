@@ -1,4 +1,4 @@
-package com.eddy.materialdesign.ui.slideshow;
+package com.eddy.materialdesign.ui.cardviews;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -12,21 +12,22 @@ import androidx.customview.widget.ViewDragHelper;
 import androidx.fragment.app.Fragment;
 
 import com.eddy.materialdesign.R;
+
 import com.google.android.material.card.MaterialCardView;
 
-public class SlideshowFragment extends Fragment { //implements
+public class CardViewFragment extends Fragment { //implements
         //View.OnTouchListener {
         //ViewDragHelper.Callback {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
     private ViewDragHelper mTopViewDragHelper;
 
-    private SlideshowViewModel slideshowViewModel;
+    //private SlideshowViewModel slideshowViewModel;
     private MaterialCardView cardView;
     private RatingBar ratingBar;
 
-    public static SlideshowFragment newInstance(int index) {
-        SlideshowFragment fragment = new SlideshowFragment();
+    public static CardViewFragment newInstance(int index) {
+        CardViewFragment fragment = new CardViewFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(ARG_SECTION_NUMBER, index);
         fragment.setArguments(bundle);
@@ -36,7 +37,7 @@ public class SlideshowFragment extends Fragment { //implements
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         //slideshowViewModel = ViewModelProviders.of(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
+        View root = inflater.inflate(R.layout.fragment_card_view, container, false);
 
         cardView = root.findViewById(R.id.card_view);
 

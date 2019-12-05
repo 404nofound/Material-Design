@@ -16,7 +16,7 @@ public class BottomAppBarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bottomappbar);
+        setContentView(R.layout.activity_bottom_app_bar);
 
         BottomAppBar bar = findViewById(R.id.bar);
         setSupportActionBar(bar);

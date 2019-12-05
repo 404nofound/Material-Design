@@ -19,6 +19,7 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.viewpager.widget.ViewPager;
 
 import com.eddy.materialdesign.ui.bottomappbar.BottomAppBarActivity;
+import com.eddy.materialdesign.ui.bottomnavigation.BottomNavigationActivity;
 import com.eddy.materialdesign.ui.recyclerview.RecyclerViewActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
@@ -88,15 +89,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.nav_home:
+            case R.id.nav_recycler_view:
                 Intent i1 = new Intent(this, RecyclerViewActivity.class);
                 startActivity(i1);
                 break;
-            case R.id.nav_gallery:
+            case R.id.nav_bottom_app_bar:
                 Intent i2 = new Intent(this, BottomAppBarActivity.class);
                 startActivity(i2);
                 break;
-            case R.id.nav_slideshow:
+            case R.id.nav_bottom_navigation:
+                Intent i3 = new Intent(this, BottomNavigationActivity.class);
+                startActivity(i3);
                 break;
         }
 
