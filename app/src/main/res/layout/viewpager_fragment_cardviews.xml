@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:background="#EEEEEE"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
@@ -12,14 +12,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
-
-
         <include layout="@layout/cardview_1" />
 
         <include layout="@layout/cardview_2" />
 
         <include layout="@layout/cardview_3" />
+
+        <include layout="@layout/cardview_4" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

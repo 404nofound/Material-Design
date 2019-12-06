@@ -6,8 +6,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
+    android:layout_margin="8dp"
     android:checkable="true"
     android:clickable="true"
     android:focusable="true"
@@ -192,20 +191,33 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="8dp"
+                android:padding="4dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/ic_share_black_24dp" />
 
             <ImageView
+                android:id="@+id/img_bookmark_cardview_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:padding="4dp"
+                android:layout_toStartOf="@id/img_share_cardview_3"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_bookmark_border_black_24dp" />
+
+            <ImageView
                 android:id="@+id/img_favorite_cardview_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:layout_toStartOf="@id/img_share_cardview_3"
+                android:padding="4dp"
+                android:layout_toStartOf="@id/img_bookmark_cardview_3"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
-
                 android:layout_centerVertical="true"
                 android:src="@drawable/ic_favorite_border_black_24dp" />
         </RelativeLayout>
