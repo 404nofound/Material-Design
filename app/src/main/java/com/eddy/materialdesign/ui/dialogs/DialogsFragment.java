@@ -1,23 +1,31 @@
 package com.eddy.materialdesign.ui.dialogs;
 
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.fragment.app.Fragment;
 
+import com.bumptech.glide.Glide;
 import com.eddy.materialdesign.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.Calendar;
 
@@ -42,7 +50,7 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        //slideshowViewModel = ViewModelProviders.of(this).get(SlideshowViewModel.class);
+
         root = inflater.inflate(R.layout.viewpager_fragment_dislogs, container, false);
 
         button0 = root.findViewById(R.id.btn_dialog_0);
@@ -71,30 +79,21 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
         button10.setOnClickListener(this);
         button11.setOnClickListener(this);
 
-
         return root;
     }
 
     @Override
     public void onClick(View v) {
-
         switch (v.getId()) {
             case R.id.btn_dialog_0:
-                /*Snackbar.make(root, "Snack Bar", Snackbar.LENGTH_LONG)
+                Snackbar.make(root, "Snack Bar", Snackbar.LENGTH_LONG)
                         .setAction("Dismiss", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 // Respond to the click, such as by undoing the modification that caused
                                 // this message to be displayed
                             }
-                        }).show();*/
-
-                BottomSheetDialog sheelt = new BottomSheetDialog(getActivity());
-                View contentView = LayoutInflater.from(getActivity()).inflate(R.layout.bottom_pop_item, null);
-                sheelt.setContentView(contentView);
-
-                sheelt.show();
-                sheelt.getWindow().findViewById(R.id.design_bottom_sheet).setBackgroundResource(android.R.color.transparent);
+                        }).show();
                 break;
             case R.id.btn_dialog_1:
                 new MaterialAlertDialogBuilder(getActivity(), R.style.ThemeOverlay_MaterialComponents_MaterialAlertDialog)
@@ -184,7 +183,6 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
                         .show();
                 break;
 
-
             case R.id.btn_dialog_5:
                 ProgressDialog progressDialog = new ProgressDialog(getContext());
                 progressDialog.setMessage("Waiting");
@@ -192,9 +190,9 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.btn_dialog_6:
-                /*final ProgressDialog horizontalProgressDialog = new ProgressDialog(getContext());
+                final ProgressDialog horizontalProgressDialog = new ProgressDialog(getContext());
                 horizontalProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-                horizontalProgressDialog.setMessage(getString(R.string.main_dialog_progress_title));
+                horizontalProgressDialog.setMessage("Processing");
                 horizontalProgressDialog.setCancelable(false);
                 horizontalProgressDialog.setMax(100);
                 horizontalProgressDialog.show();
@@ -207,7 +205,7 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
                         while (progress <= 100) {
                             horizontalProgressDialog.setProgress(progress);
                             if (progress == 100) {
-                                horizontalProgressDialog.dismiss();
+                                horizontalProgressDialog.setCancelable(true);
                             }
                             try {
                                 Thread.sleep(35);
@@ -217,7 +215,7 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
                             progress++;
                         }
                     }
-                }).start();*/
+                }).start();
                 break;
 
             case R.id.btn_dialog_7:
@@ -246,31 +244,33 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.btn_dialog_9:
-                /*final BottomSheetDialog mBottomSheetDialog = new BottomSheetDialog(getContext());
-                View dialogView = getActivity().getLayoutInflater().inflate(R.layout.dialog_bottom_sheet, null);
-                Button btn_dialog_bottom_sheet_ok = dialogView.findViewById(R.id.btn_dialog_bottom_sheet_ok);
-                Button btn_dialog_bottom_sheet_cancel = dialogView.findViewById(R.id.btn_dialog_bottom_sheet_cancel);
-                ImageView img_bottom_dialog = dialogView.findViewById(R.id.img_bottom_dialog);
-                Glide.with(getContext()).load(R.drawable.bottom_dialog).into(img_bottom_dialog);
-                mBottomSheetDialog.setContentView(dialogView);
+                BottomSheetDialog bottomSheet = new BottomSheetDialog(getActivity());
+                View contentView = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_bottomsheet, null);
+                bottomSheet.setContentView(contentView);
 
-                btn_dialog_bottom_sheet_ok.setOnClickListener(new View.OnClickListener() {
+                Button dialogButton1 = contentView.findViewById(R.id.btn1_cardview_1);
+                Button dialogButton2 = contentView.findViewById(R.id.btn2_cardview_1);
+
+                dialogButton1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        mBottomSheetDialog.dismiss();
+                        Toast.makeText(getActivity(), "Button 1", Toast.LENGTH_SHORT).show();
                     }
                 });
-                btn_dialog_bottom_sheet_cancel.setOnClickListener(new View.OnClickListener() {
+
+                dialogButton2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        mBottomSheetDialog.dismiss();
+                        Toast.makeText(getActivity(), "Button 2", Toast.LENGTH_SHORT).show();
                     }
                 });
-                mBottomSheetDialog.show();*/
+
+                bottomSheet.show();
+                bottomSheet.getWindow().findViewById(R.id.design_bottom_sheet).setBackgroundResource(android.R.color.transparent);
                 break;
 
             case R.id.btn_dialog_10:
-                /*final Dialog fullscreenDialog = new Dialog(getContext(), R.style.DialogFullscreen);
+                final Dialog fullscreenDialog = new Dialog(getContext(), R.style.DialogFullscreen);
 
                 fullscreenDialog.setContentView(R.layout.dialog_fullscreen);
                 ImageView img_full_screen_dialog = fullscreenDialog.findViewById(R.id.img_full_screen_dialog);
@@ -282,21 +282,20 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
                         fullscreenDialog.dismiss();
                     }
                 });
-                fullscreenDialog.show();*/
+                fullscreenDialog.show();
                 break;
 
             case R.id.btn_dialog_11:
-                /*PopupMenu popupMenu = new PopupMenu(getContext(), btn_dialog_11);
-                popupMenu.getMenuInflater().inflate(R.menu.popup_menu_main, popupMenu.getMenu());
+                PopupMenu popupMenu = new PopupMenu(getContext(), button11);
+                popupMenu.getMenuInflater().inflate(R.menu.menu_basic, popupMenu.getMenu());
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         return false;
                     }
                 });
-                popupMenu.show();*/
+                popupMenu.show();
                 break;
-
         }
     }
 }

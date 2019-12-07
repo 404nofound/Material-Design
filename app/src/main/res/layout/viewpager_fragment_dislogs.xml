@@ -17,132 +17,144 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dialog_0"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#2196F3"
+
             android:padding="15dp"
             android:text="SnackBar"
-            android:textColor="@color/white"
+
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dialog_1"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#2196F3"
+
             android:padding="15dp"
             android:text="Alert Dialog"
-            android:textColor="@color/white"
+
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dialog_2"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#009688"
+
             android:layout_marginTop="8dp"
             android:padding="15dp"
             android:text="Confirmation Dialog"
-            android:textColor="@color/white"
+
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dialog_3"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#FF9800"
+
             android:padding="15dp"
             android:text="Single Choice Dialog"
-            android:textColor="@color/white"
+
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dialog_4"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#2196F3"
+
             android:padding="15dp"
             android:text="Multi Choice Dialog"
-            android:textColor="@color/white"
+
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dialog_5"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#009688"
+
             android:layout_marginTop="8dp"
             android:padding="15dp"
             android:text="Progress Dialog 1"
-            android:textColor="@color/white"
+
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dialog_6"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#FF9800"
+
             android:padding="15dp"
             android:text="Progress Dialog 2"
-            android:textColor="@color/white"
+
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dialog_7"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#2196F3"
+
             android:padding="15dp"
             android:text="Date Picker Dialog"
-            android:textColor="@color/white"
+
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dialog_8"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#009688"
+
             android:layout_marginTop="8dp"
             android:padding="15dp"
             android:text="Time Picker Dialog"
-            android:textColor="@color/white"
+
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dialog_9"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#FF9800"
+
             android:padding="15dp"
             android:text="Bottom Dialog"
-            android:textColor="@color/white"
+
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dialog_10"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#2196F3"
+
             android:padding="15dp"
             android:text="Fullscreen Dialog"
-            android:textColor="@color/white"
+
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dialog_11"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#009688"
+
             android:layout_marginTop="8dp"
             android:padding="15dp"
             android:text="Popup Menu Dialog"
-            android:textColor="@color/white"
+
             android:textSize="14sp" />
 
 
