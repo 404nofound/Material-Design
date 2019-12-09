@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.eddy.materialdesign.R;
+import com.eddy.materialdesign.ui.recyclerview.helper.ItemTouchHelperCallback;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,14 +20,12 @@ import java.util.Random;
 
 public class RecyclerViewActivity extends AppCompatActivity {
 
-    private Fruit[] fruits = {new Fruit("Apple", R.drawable.apple), new Fruit("Banana", R.drawable.banana),
-            new Fruit("Orange", R.drawable.orange), new Fruit("Watermelon", R.drawable.watermelon),
-            new Fruit("Pear", R.drawable.pear), new Fruit("Grape", R.drawable.grape),
-            new Fruit("Pineapple", R.drawable.pineapple), new Fruit("Strawberry", R.drawable.strawberry),
-            new Fruit("Cherry", R.drawable.cherry), new Fruit("Mango", R.drawable.mango)};
+    private Item[] items = {new Item("Apple", R.drawable.background1), new Item("Banana", R.drawable.background2),
+            new Item("Orange", R.drawable.background3), new Item("Watermelon", R.drawable.background4),
+            new Item("Pear", R.drawable.background5), new Item("Grape", R.drawable.background6)};
 
-    private List<Fruit> fruitList = new ArrayList<>();
-    private FruitAdapter adapter;
+    private List<Item> itemList = new ArrayList<>();
+    private ItemAdapter adapter;
     private SwipeRefreshLayout swipeRefresh;
     static RecyclerView recyclerView;
 
@@ -43,12 +42,12 @@ public class RecyclerViewActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        initFruits();
+        initItems();
         recyclerView = findViewById(R.id.recycler_view);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        adapter = new FruitAdapter(fruitList);
+        adapter = new ItemAdapter(itemList);
         recyclerView.setAdapter(adapter);
 
 
@@ -61,12 +60,12 @@ public class RecyclerViewActivity extends AppCompatActivity {
         swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                refreshFruits();
+                refreshItems();
             }
         });
     }
 
-    private void refreshFruits() {
+    private void refreshItems() {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -78,7 +77,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        initFruits();
+                        initItems();
                         adapter.notifyDataSetChanged();
                         swipeRefresh.setRefreshing(false);
                     }
@@ -87,12 +86,12 @@ public class RecyclerViewActivity extends AppCompatActivity {
         }).start();
     }
 
-    private void initFruits() {
-        fruitList.clear();
+    private void initItems() {
+        itemList.clear();
         for (int i = 0; i < 10; i++) {
             Random random = new Random();
-            int index = random.nextInt(fruits.length);
-            fruitList.add(fruits[index]);
+            int index = random.nextInt(items.length);
+            itemList.add(items[index]);
         }
     }
 

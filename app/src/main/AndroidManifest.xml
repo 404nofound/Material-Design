@@ -13,7 +13,7 @@
         <activity android:name=".ui.bottomappbar.BottomAppBarActivity" />
         <activity android:name=".ui.recyclerview.RecyclerViewActivity" />
         <activity
-            android:name=".ui.recyclerview.FruitActivity"
+            android:name=".ui.recyclerview.ItemActivity"
             android:theme="@style/FruitActivityTheme" />
         <activity
             android:name=".MainActivity"
