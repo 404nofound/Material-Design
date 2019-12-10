@@ -7,6 +7,11 @@
 
     <!-- Other components and views -->
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bar"
         style="@style/Widget.MaterialComponents.BottomAppBar"

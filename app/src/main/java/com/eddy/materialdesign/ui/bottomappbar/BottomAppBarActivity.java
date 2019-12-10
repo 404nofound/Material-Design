@@ -4,14 +4,32 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.eddy.materialdesign.R;
+import com.eddy.materialdesign.ui.recyclerview.Item;
+import com.eddy.materialdesign.ui.recyclerview.ItemAdapter;
 import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class BottomAppBarActivity extends AppCompatActivity {
+
+    private Item[] items = {new Item("Apple", R.drawable.background1), new Item("Banana", R.drawable.background2),
+            new Item("Orange", R.drawable.background3), new Item("Watermelon", R.drawable.background4),
+            new Item("Pear", R.drawable.background5), new Item("Grape", R.drawable.background6)};
+
+    private List<Item> itemList = new ArrayList<>();
+    private ItemAdapter adapter;
+    private RecyclerView recyclerView;
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +38,16 @@ public class BottomAppBarActivity extends AppCompatActivity {
 
         BottomAppBar bar = findViewById(R.id.bar);
         setSupportActionBar(bar);
-        bar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
 
-                finish();
+        fab = findViewById(R.id.fab);
 
-                return true;
-            }
-        });
+        initItems();
+        recyclerView = findViewById(R.id.recycler_view);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+        adapter = new ItemAdapter(itemList);
+        recyclerView.setAdapter(adapter);
 
         bar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +56,23 @@ public class BottomAppBarActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                adapter.addItem(0, items[0]);
+                recyclerView.scrollToPosition(0);
+            }
+        });
+    }
+
+    private void initItems() {
+        itemList.clear();
+        for (int i = 0; i < 10; i++) {
+            Random random = new Random();
+            int index = random.nextInt(items.length);
+            itemList.add(items[index]);
+        }
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,12 +84,13 @@ public class BottomAppBarActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.item1:
-
+                Toast.makeText(this, "CLicked Item 1", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.item2:
-
+                Toast.makeText(this, "CLicked Item 2", Toast.LENGTH_SHORT).show();
                 break;
             default:
+                break;
         }
         return true;
     }

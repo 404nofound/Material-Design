@@ -110,7 +110,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
     public void addItem(int position, Item insertData) {
         mItemList.add(position, insertData);
         notifyItemInserted(position);
-        if(position == 0){
+        if(position == 0 && RecyclerViewActivity.recyclerView!= null){
             RecyclerViewActivity.recyclerView.scrollToPosition(0);
         }
 
