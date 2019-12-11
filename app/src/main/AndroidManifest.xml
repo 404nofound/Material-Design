@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.bottomnavigation.BottomNavigationActivity"></activity>
+        <activity
+            android:name=".ui.fullscreen.FullScreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen2"
+            android:theme="@style/FullscreenTheme"></activity>
+        <activity android:name=".ui.bottomnavigation.BottomNavigationActivity" />
         <activity android:name=".ui.bottomappbar.BottomAppBarActivity" />
         <activity android:name=".ui.recyclerview.RecyclerViewActivity" />
         <activity

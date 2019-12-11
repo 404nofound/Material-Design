@@ -17,21 +17,21 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Bottom Navigation" />
         <item
-            android:id="@+id/nav_tools"
+            android:id="@+id/nav_full_screen"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Function 2" />
+            android:title="Full Screen View" />
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/nav_github"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Function 1" />
+                android:title="Visit Github" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_google_play_store"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Function 2" />
+                android:title="Google Play Store" />
         </menu>
     </item>
 

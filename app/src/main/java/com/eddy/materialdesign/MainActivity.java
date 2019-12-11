@@ -1,6 +1,7 @@
 package com.eddy.materialdesign;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,6 +21,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.eddy.materialdesign.ui.bottomappbar.BottomAppBarActivity;
 import com.eddy.materialdesign.ui.bottomnavigation.BottomNavigationActivity;
+import com.eddy.materialdesign.ui.fullscreen.FullScreenActivity;
 import com.eddy.materialdesign.ui.recyclerview.RecyclerViewActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
@@ -35,15 +37,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Toolbar toolbar = findViewById(R.id.main_toolbar);
         setSupportActionBar(toolbar);
-
-        /*FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
 
         drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -100,6 +93,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_bottom_navigation:
                 Intent i3 = new Intent(this, BottomNavigationActivity.class);
                 startActivity(i3);
+                break;
+            case R.id.nav_full_screen:
+                Intent i4 = new Intent(this, FullScreenActivity.class);
+                startActivity(i4);
+                break;
+            case R.id.nav_github:
+                Intent i5 = new Intent(Intent.ACTION_VIEW);
+                i5.setData(Uri.parse("https://github.com/404nofound"));
+                startActivity(i5);
+                break;
+            case R.id.nav_google_play_store:
+                Intent i6 = new Intent(Intent.ACTION_VIEW);
+                i6.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.eddy.mbta"));
+                startActivity(i6);
                 break;
         }
 
