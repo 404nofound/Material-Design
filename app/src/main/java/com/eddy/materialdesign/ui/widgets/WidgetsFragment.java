@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.eddy.materialdesign.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.material.button.MaterialButtonToggleGroup;
 
 public class WidgetsFragment extends Fragment {
@@ -58,6 +60,10 @@ public class WidgetsFragment extends Fragment {
                 }
             }
         }.start();
+
+        AdView mAdView = root.findViewById(R.id.adView3);
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("87B8E83525FCB69F71AE1154E35EF784").build();
+        mAdView.loadAd(adRequest);
 
         return root;
     }

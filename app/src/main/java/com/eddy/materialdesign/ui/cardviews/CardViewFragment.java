@@ -11,7 +11,11 @@ import android.widget.RatingBar;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.eddy.materialdesign.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class CardViewFragment extends Fragment implements View.OnClickListener { //implements
 
@@ -19,6 +23,8 @@ public class CardViewFragment extends Fragment implements View.OnClickListener {
 
     private ImageView favour_card2, favour_card3, bookmark_card3;
     private boolean favour2Clicked, favour3Clicked, bookmark3Clicked;
+
+    private ImageView image1, image2_1, image2_2, image3, image4;
 
     public static CardViewFragment newInstance(int index) {
         CardViewFragment fragment = new CardViewFragment();
@@ -37,6 +43,17 @@ public class CardViewFragment extends Fragment implements View.OnClickListener {
         favour_card3 = root.findViewById(R.id.img_favorite_cardview_3);
         bookmark_card3 = root.findViewById(R.id.img_bookmark_cardview_3);
 
+        image1 = root.findViewById(R.id.img_cardview_1);
+        image2_1 = root.findViewById(R.id.small_circle_cardview_2);
+        image2_2 = root.findViewById(R.id.img_cardview_2);
+        image3 = root.findViewById(R.id.img_cardview_3);
+        image4 = root.findViewById(R.id.img_cardview_4);
+
+        Glide.with(getContext()).load(R.drawable.background5).apply(new RequestOptions().fitCenter()).into(image1);
+        Glide.with(getContext()).load(R.drawable.background2).apply(new RequestOptions().fitCenter()).into(image2_2);
+        Glide.with(getContext()).load(R.drawable.background3).apply(new RequestOptions().fitCenter()).into(image3);
+        Glide.with(getContext()).load(R.drawable.background4).apply(new RequestOptions().fitCenter()).into(image4);
+
         favour_card2.setOnClickListener(this);
         favour_card3.setOnClickListener(this);
         bookmark_card3.setOnClickListener(this);
@@ -48,6 +65,10 @@ public class CardViewFragment extends Fragment implements View.OnClickListener {
                 ratingBar.setRating(v);
             }
         });
+
+        AdView mAdView = root.findViewById(R.id.adView1);
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("87B8E83525FCB69F71AE1154E35EF784").build();
+        mAdView.loadAd(adRequest);
 
         return root;
     }

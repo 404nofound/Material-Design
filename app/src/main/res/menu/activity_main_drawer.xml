@@ -6,19 +6,19 @@
     <group android:checkableBehavior="none">
         <item
             android:id="@+id/nav_recycler_view"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_apps_black_24dp"
             android:title="Recycler View" />
         <item
             android:id="@+id/nav_bottom_app_bar"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_file_download_black_24dp"
             android:title="Bottom App Bar" />
         <item
             android:id="@+id/nav_bottom_navigation"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_more_horiz_black_24dp"
             android:title="Bottom Navigation" />
         <item
             android:id="@+id/nav_full_screen"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_fullscreen_black_24dp"
             android:title="Full Screen View" />
     </group>
 
@@ -26,11 +26,11 @@
         <menu>
             <item
                 android:id="@+id/nav_github"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_share_black_24dp"
                 android:title="Visit Github" />
             <item
                 android:id="@+id/nav_google_play_store"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_info_black_24dp"
                 android:title="Google Play Store" />
         </menu>
     </item>

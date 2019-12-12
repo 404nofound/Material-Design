@@ -8,8 +8,16 @@ import android.view.View;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.eddy.materialdesign.R;
+import com.eddy.materialdesign.ui.recyclerview.Item;
+import com.eddy.materialdesign.ui.recyclerview.ItemAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -53,6 +61,7 @@ public class FullScreenActivity extends AppCompatActivity {
         }
     };
     private View mControlsView;
+
     private final Runnable mShowPart2Runnable = new Runnable() {
         @Override
         public void run() {
@@ -87,6 +96,14 @@ public class FullScreenActivity extends AppCompatActivity {
         }
     };
 
+    private Item[] items = {new Item("Item A", R.drawable.background1), new Item("Item B", R.drawable.background2),
+            new Item("Item C", R.drawable.background3), new Item("Item D", R.drawable.background4),
+            new Item("Item E", R.drawable.background5), new Item("Item F", R.drawable.background6)};
+
+    private List<Item> itemList = new ArrayList<>();
+    private ItemAdapter adapter;
+    private RecyclerView recyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -110,6 +127,14 @@ public class FullScreenActivity extends AppCompatActivity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+
+        initItems();
+        recyclerView = findViewById(R.id.full_recycler_view);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+        adapter = new ItemAdapter(itemList);
+        recyclerView.setAdapter(adapter);
     }
 
     @Override
@@ -120,6 +145,15 @@ public class FullScreenActivity extends AppCompatActivity {
         // created, to briefly hint to the user that UI controls
         // are available.
         delayedHide(100);
+    }
+
+    private void initItems() {
+        itemList.clear();
+        for (int i = 0; i < 2; i++) {
+            Random random = new Random();
+            int index = random.nextInt(items.length);
+            itemList.add(items[index]);
+        }
     }
 
     private void toggle() {

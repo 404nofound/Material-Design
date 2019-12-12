@@ -32,7 +32,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="16dp"
                 android:contentDescription="@string/nav_header_desc"
-                app:srcCompat="@mipmap/holder_small" />
+                app:srcCompat="@drawable/holder_small" />
 
             <TextView
                 android:id="@+id/title_cardview_2"
@@ -68,7 +68,7 @@
             android:layout_below="@id/title_part_cardview_2"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            android:src="@mipmap/holder"/>
+            android:src="@drawable/holder"/>
 
         <TextView
             android:id="@+id/support_text_cardview_2"

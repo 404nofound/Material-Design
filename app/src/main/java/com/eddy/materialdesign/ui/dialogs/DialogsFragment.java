@@ -21,7 +21,10 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.eddy.materialdesign.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -78,6 +81,10 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
         button9.setOnClickListener(this);
         button10.setOnClickListener(this);
         button11.setOnClickListener(this);
+
+        AdView mAdView = root.findViewById(R.id.adView2);
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("87B8E83525FCB69F71AE1154E35EF784").build();
+        mAdView.loadAd(adRequest);
 
         return root;
     }
@@ -274,7 +281,9 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
 
                 fullscreenDialog.setContentView(R.layout.dialog_fullscreen);
                 ImageView img_full_screen_dialog = fullscreenDialog.findViewById(R.id.img_full_screen_dialog);
-                Glide.with(getContext()).load(R.drawable.google_assistant).into(img_full_screen_dialog);
+
+                Glide.with(getContext()).load(R.drawable.background5).apply(new RequestOptions().fitCenter()).into(img_full_screen_dialog);
+
                 ImageView img_dialog_fullscreen_close = fullscreenDialog.findViewById(R.id.img_dialog_fullscreen_close);
                 img_dialog_fullscreen_close.setOnClickListener(new View.OnClickListener() {
                     @Override

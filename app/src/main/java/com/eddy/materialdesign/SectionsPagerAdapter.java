@@ -1,6 +1,7 @@
 package com.eddy.materialdesign;
 
 import android.content.Context;
+import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
@@ -49,5 +50,13 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         // Show 2 total pages.
         return 3;
+    }
+
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        //super.destroyItem(container, position, object);
+        if (position == 2) {
+            super.destroyItem(container, position, object);
+        }
     }
 }

@@ -22,9 +22,9 @@ import java.util.Random;
 
 public class BottomAppBarActivity extends AppCompatActivity {
 
-    private Item[] items = {new Item("Apple", R.drawable.background1), new Item("Banana", R.drawable.background2),
-            new Item("Orange", R.drawable.background3), new Item("Watermelon", R.drawable.background4),
-            new Item("Pear", R.drawable.background5), new Item("Grape", R.drawable.background6)};
+    private Item[] items = {new Item("Item A", R.drawable.background1), new Item("Item B", R.drawable.background2),
+            new Item("Item C", R.drawable.background3), new Item("Item D", R.drawable.background4),
+            new Item("Item E", R.drawable.background5), new Item("Item F", R.drawable.background6)};
 
     private List<Item> itemList = new ArrayList<>();
     private ItemAdapter adapter;

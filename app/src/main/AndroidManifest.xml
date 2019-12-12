@@ -12,7 +12,6 @@
         <activity
             android:name=".ui.fullscreen.FullScreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_fullscreen2"
             android:theme="@style/FullscreenTheme"></activity>
         <activity android:name=".ui.bottomnavigation.BottomNavigationActivity" />
         <activity android:name=".ui.bottomappbar.BottomAppBarActivity" />
@@ -30,6 +29,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4075829839329155~5161317796"/>
     </application>
 
 </manifest>

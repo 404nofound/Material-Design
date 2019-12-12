@@ -36,7 +36,7 @@
                 android:layout_marginStart="16dp"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                android:src="@mipmap/holder" />
+                android:src="@drawable/holder" />
 
             <TextView
                 android:id="@+id/title_cardview_1"

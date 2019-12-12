@@ -27,7 +27,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/title_cardview_4"
             android:scaleType="centerCrop"
-            android:src="@mipmap/holder"/>
+            android:src="@drawable/holder"/>
 
         <LinearLayout
             android:id="@+id/title_cardview_4"
