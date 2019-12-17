@@ -10,7 +10,7 @@
 
 <img align="right" src="https://github.com/404nofound/MBTA_Boston_Transit/blob/master/demo1.gif" alt="" width="288" height="512" style="display: inline; float: right"/>
 
-## About Boston T
+## About Material Design App
 
 [Video](https://www.yichangshao.com/demo/demo.mp4)
 
