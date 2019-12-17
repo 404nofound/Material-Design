@@ -8,7 +8,7 @@
       alt="Download from Google Play" 
       height="70">](https://play.google.com/store/apps/details?id=com.eddy.materialdesign)
 
-<img align="right" src="https://github.com/404nofound/MBTA_Boston_Transit/blob/master/demo1.gif" alt="" width="288" height="512" style="display: inline; float: right"/>
+<img align="right" src="https://www.yichangshao.com/demo/md_demo.mp4" alt="" width="288" height="512" style="display: inline; float: right"/>
 
 ## About Material Design App
 
