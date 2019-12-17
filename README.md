@@ -12,7 +12,7 @@
 
 ## About Material Design App
 
-[Video](https://www.yichangshao.com/demo/demo.mp4)
+[Video](https://www.yichangshao.com/demo/md_demo.mp4)
 
 Material Design App is designed to help android developers to learn the Material Design Guide. It's a simple demo app and it almost includes all the material widgets. User can download the app and review the code here to find how to use material design code template. This app will be updated from time to time.
 
